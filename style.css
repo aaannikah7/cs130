@@ -1,0 +1,53 @@
+/* You're welcome to change any of this! */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    height: 16vh;
+}
+
+main {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    min-height: 84vh;
+}
+
+main > section {
+    height: 100%;
+}
+
+#homework {
+    background: #ceeaf7ff;
+}
+#tutorials {
+    background-color:#f4afb4ff;
+}
+
+#inspiration {
+    background-color: #7d84b2ff;
+}
+
+
+h1, h2, h3 {
+    font-family: 'Noto Serif', serif;
+}
+body {
+    margin: 0px;
+    font-family: 'Noto Serif', serif;
+}
+header, section {
+    padding: 20px;
+}
+p, li {
+    line-height: 1.5em;
+}
+
+#inspiration {
+    background-color: #F0F0F0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
