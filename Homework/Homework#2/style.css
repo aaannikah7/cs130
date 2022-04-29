@@ -1,0 +1,268 @@
+body {
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    color: #fff;
+}
+a, a:hover, a:visited, a:active { 
+    color: #fff;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/**********/
+/* Layout */
+/**********/
+aside, footer, header, nav, section, article {
+    display: flex;
+    flex-direction: column;
+}
+body {
+    overflow: hidden;
+    margin: 0px;
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-rows: auto 100px;
+    grid-template-areas:
+       "left main"
+       "bottom bottom";
+    height: 100vh;
+}
+aside {
+    background-color: #000;
+    grid-area: left;
+}
+
+main {
+    background: #111;
+    grid-area: main;
+    min-height: calc(350px);
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    z-index: 3;
+}
+
+nav {
+    margin-top: 100px;
+}
+
+footer {
+    background: #222;
+    grid-area: bottom;
+}
+
+
+/***************************/
+/* Accessories & Florishes */
+/***************************/
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 4px solid transparent;
+    border-radius: 16px;
+    background-clip: padding-box;
+    min-height: 30px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: hsla(0,0%,100%,.3);
+}
+
+/***************************/
+/* Part A: Left Navigation */
+/***************************/
+
+#sidebar {
+    padding: 16px;
+    gap: 24px;
+}
+
+#sidebar a {
+    padding: 6px 0 6px 10px;
+    color: #c6c6c6;
+}
+
+#sidebar .selected {
+    border-left: 4px solid #008000;
+}
+
+#sidebar a:hover {
+    color: #fff;
+}
+
+/********************************/
+/* Part B: Header & Nav Styling */
+/********************************/
+
+header, nav {
+    flex-direction: row;
+    gap: 32px;
+}
+
+header {
+    padding: 32px 32px 0 0;
+    justify-content: flex-end;
+}
+
+header a {
+    border: 1px solid #fff;
+    padding: 10px 32px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#profile {
+    background-color: #222;
+    font-weight: 600;
+    border: none;
+}
+
+nav {
+    padding: 0 0 32px 32px;
+    margin-top: 25px;
+}
+
+nav a {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav .selected {
+    border-bottom: 4px solid #1db853;
+}
+
+.fa-spotify {
+    font-size: 16px;
+}
+
+nav a:hover {
+    border-bottom: 4px solid #1db853;
+}
+
+#profile:hover {
+    background-color: #2e2e2e;
+}
+
+header a:hover {
+    background-color: #2e2e2e;
+}
+
+/*************************/
+/* Part C: Artists Panel */
+/*************************/
+
+#featured-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 16px;
+}
+
+.artist-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    width: 200px;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.artist-card img {
+    border-radius: 50%;
+    max-width: 150px;
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.artist-card h2 {
+    font-size: 16px;
+    margin-bottom: 8px;
+
+}
+
+.artist-card p {
+    margin: 0;
+}
+
+.artist-card button{
+    background-color: #1db853;
+    color: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    align-self: flex-end;
+    visibility: hidden;
+}
+
+.artist-card:hover button {
+    visibility: visible;
+}
+
+
+
+/**************************/
+/* Part D: Responsive UIs */
+/**************************/
+
+@media (min-width: 767px) and (max-width: 1024px) {
+    .artist-card {
+        width: 125px;
+        padding: 8px;
+    }
+
+    .artist-card img{
+        width: 100px;
+    }
+
+.artist-card h2, 
+.artist-card p {
+    font-size: 13px;
+}
+}
+
+@media (max-width: 767px) {
+
+body {
+    grid-template-columns: 1fr;
+}
+
+#sidebar, #upgrade {
+    display: none;
+}
+
+#profile {
+    padding: 8px 32px;
+}
+
+nav a {
+    font-size: 12px;
+}
+
+    #featured-content {
+        justify-content: center;
+        padding: 0;
+    }
+
+
+    .artist-card {
+        width: 165px;
+        padding: 8px;
+    }
+
+    .artist-card img{
+        width: 100px;
+    }
+
+.artist-card h2, 
+.artist-card p {
+    font-size: 13px;
+}
+}
