@@ -54,7 +54,7 @@ const arrayLength = imageElements.length;
 
 // create event handler:
 const showImage = (ev) => {
-    const elem = e.currentTarget;
+    const elem = ev.currentTarget;
     currentIndex = parseInt(elem.dataset.index);
 // update the feature element to the current element clicked
         feature.style.backgroundImage = elem.style.backgroundImage;
