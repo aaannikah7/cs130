@@ -4,7 +4,7 @@ const AudioPlayer = (selector, audioFile) => {
     let rwdButton;
     let ffwdButton;
     let sliderInput;
-    let containerElement = document;
+    let containerElement = document; 
     if (selector) {
         containerElement = document.querySelector(selector);
     }
@@ -118,6 +118,7 @@ const AudioPlayer = (selector, audioFile) => {
         rwdButton = containerElement.querySelector('#rwd');
         ffwdButton = containerElement.querySelector('#ffwd');
         sliderInput = containerElement.querySelector('#player-time');
+        playTrack = containerElement.querySelector(".play-track");
 
         console.log(audio, playButton);
         // attach events to event handlers (i.e. functions)
@@ -125,9 +126,10 @@ const AudioPlayer = (selector, audioFile) => {
         audio.onended = resetTime;
         audio.onloadeddata = function() {
             console.log("preview loaded");
+            this.play();
             //resetTime();
             //this.pause();
-        };
+        };   
         playButton.onclick = this.togglePlay;
         rwdButton.onclick = skipBackward;
         ffwdButton.onclick = skipForward;

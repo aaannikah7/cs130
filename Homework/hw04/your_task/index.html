@@ -1,4 +1,5 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <title>Spotify Player</title>
         <link rel="stylesheet" href="style.css">
@@ -25,7 +26,10 @@
                 <input type="search" 
                     placeholder="Search for Artists or Songs" 
                     id="search" 
-                    value="" />
+                    value="" 
+                    aria-label="Artist Search"
+                    label="Artist Search"
+                    />
             </header>
             <article id="featured-content">
                 <section id="artist-section">
@@ -49,9 +53,14 @@
             </div>
             <div class="player">
                 <div class="controls">
-                    <button id="rwd" aria-label="rewind"><i class="fas fa-step-backward"></i></button>
-                    <button id="play_pause" aria-label="play or pause"><i class="far fa-play-circle"></i></button>
-                    <button id="ffwd" aria-label="fast forward"><i class="fas fa-step-forward"></i></button>
+                    <button id="rwd" aria-label="rewind">
+                        <i class="fas fa-step-backward"></i>
+                    </button>
+                    <button id="play_pause" aria-label="play or pause">
+                        <i class="far fa-play-circle"></i></button>
+                    <button id="ffwd" aria-label="fast forward">
+                        <i class="fas fa-step-forward"></i>
+                    </button>
                 </div>
                 <div class="slider">
                     <audio preload class="audio">
