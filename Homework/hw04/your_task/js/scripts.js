@@ -42,7 +42,7 @@ const getTracksHTML = (data) => {
         trackArray.forEach((track) => {
             if (count <= 5) {
                 tracks.innerHTML += `
-                <>button class="track-item preview" data-preview-track="${track.preview_url}" data-artist="${track.artist.name}" data-name="${track.name}" data-img="${track.album.image_url}">
+                <button class="track-item preview" data-preview-track="${track.preview_url}" data-artist="${track.artist.name}" data-name="${track.name}" data-img="${track.album.image_url}">
                 <img src="${track.album.image_url}" alt="Album image of ${track.artist.name}">
                 <i class="fas play-track fa-play" aria-hidden="true" ></i>
                     <div class="label">

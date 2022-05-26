@@ -87,7 +87,7 @@ const AudioPlayer = (selector, audioFile) => {
 
     const resetTime = () => {
         audio.currentTime = 0;
-        playButton.querySelector('i').classList.remove('fa-pause-circle')
+        playButton.querySelector('i').classList.remove('fa-pause-circle');
         playButton.querySelector('i').classList.add('fa-play-circle');
         jumpToTime();
     };
