@@ -112,7 +112,6 @@ const AudioPlayer = (selector, audioFile) => {
 
 
     this.initialize = () => {
-        // init DOM hooks:
         audio = containerElement.querySelector('#track');
         playButton = containerElement.querySelector('#play_pause');
         rwdButton = containerElement.querySelector('#rwd');
@@ -120,13 +119,10 @@ const AudioPlayer = (selector, audioFile) => {
         sliderInput = containerElement.querySelector('#player-time');
 
         console.log(audio, playButton);
-        // attach events to event handlers (i.e. functions)
         audio.ontimeupdate = jumpToTime;
         audio.onended = resetTime;
         audio.onloadeddata = function() {
             console.log("preview loaded");
-            //resetTime();
-            //this.pause();
         };
         playButton.onclick = this.togglePlay;
         rwdButton.onclick = skipBackward;

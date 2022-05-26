@@ -41,7 +41,6 @@ const AudioPlayer = (selector, audioFile) => {
         const progressController = containerElement.querySelector('#player-time');
         const timeElapsed = containerElement.querySelector('#time-elapsed');
         const timeTotal = containerElement.querySelector('#time-total');
-        //console.log(getSliderPosition(), getCurrentTime(), getDuration());
         if (getDuration() === "0NaN:0NaN") {
             console.log('returning...');
             return;
@@ -112,7 +111,6 @@ const AudioPlayer = (selector, audioFile) => {
 
 
     this.initialize = () => {
-        // init DOM hooks:
         audio = containerElement.querySelector('#track');
         playButton = containerElement.querySelector('#play_pause');
         rwdButton = containerElement.querySelector('#rwd');
@@ -121,14 +119,11 @@ const AudioPlayer = (selector, audioFile) => {
         playTrack = containerElement.querySelector(".play-track");
 
         console.log(audio, playButton);
-        // attach events to event handlers (i.e. functions)
         audio.ontimeupdate = jumpToTime;
         audio.onended = resetTime;
         audio.onloadeddata = function() {
             console.log("preview loaded");
             this.play();
-            //resetTime();
-            //this.pause();
         };   
         playButton.onclick = this.togglePlay;
         rwdButton.onclick = skipBackward;
