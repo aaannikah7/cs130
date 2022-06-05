@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U Tour</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" /> 
+    
+    <script type="text/javascript" src="./js/app.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <img src="./img/Logo.png" alt="logo">
+        <h1>Welcome to U Tour</h1>
+    </header>
+    <nav class="main-nav">
+        <i class="fas fa-bars"></i>
+        <ul class="hide">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./tours.html">College Tours</a></li>
+            <li><a href="./faq.html">FAQ</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <main>
+      <section id="contact">
+        <h1>Contact us for more information!</h1>
+
+        <form name="contact"
+            <fieldset>
+              <div class="info-container">
+                <div class="info-item">
+                  <label for="name">Name*</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+
+                <div class="info-item">
+                  <label for="email">Email*</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="info-item">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" />
+                  </div>
+
+                <div class="info-item">
+                    <label for="type">I am a</label>
+                    <select name="user-type" id="user-type">
+                    <option class="default" selected="selected">
+                      Please select an option:
+                    </option>
+                    <option value="parent">Parent</option>
+                    <option value="student">Student</option>
+                    <option value="counselor">Counselor / Teacher</option>
+                    <option value="other">Other</option>
+                    </select>
+
+                </div>
+
+                <div class="info-item">
+                  <label for="subject">Subject</label>
+                  <input type="text" id="subject" name="subject" />
+                </div>
+
+                <div class="info-item">
+                  <label for="message">Your Message*</label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    cols="30"
+                    rows="7"
+                    required
+                  ></textarea>
+                </div>
+              </div>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+          </form>
+        </section>
+
+    </main>
+
+        <footer>
+            <p>&copy; 2022 U Tour</p>
+            <div class="social">
+          <a href="https://www.facebook.com" target="_blank"
+            ><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com" target="_blank"
+            ><i class="fab fa-instagram"></i></a>
+          <a href="https://www.twitter.com" target="_blank"
+            ><i class="fab fa-twitter"></i></a>
+          <a href="https://www.pinterest.com" target="_blank"
+            ><i class="fab fa-pinterest"></i></a>
+        </div>
+        </footer>
+
+    
+</body>
+</html>
